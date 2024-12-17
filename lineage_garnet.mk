@@ -11,6 +11,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# RisingOS
+WITH_GMS := true
+TARGET_ENABLE_BLUR := true
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := true
+TARGET_DEFAULT_PIXEL_LAUNCHER := true
+RISING_MAINTAINER="Mohammad Kibria"
+
 # Inherit from garnet device
 $(call inherit-product, device/xiaomi/garnet/device.mk)
 
@@ -24,6 +32,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="garnet_global-user 14 UKQ1.231003.002 V816.0.17.0.UNRMIXM release-keys" \
     BuildFingerprint=Redmi/garnet_global/garnet:14/UKQ1.231003.002/V816.0.17.0.UNRMIXM:user/release-keys \
     DeviceName=garnet \
-    DeviceProduct=garnet_global
+    DeviceProduct=garnet_global \
+    RisingChipset="Snapdragon® 7s Gen 2 Mobile Platform"
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
